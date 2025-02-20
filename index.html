@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Order Form</title>
+    <script>
+        function order_summary() {
+            var p_sum = document.createElement("p");
+            p_sum.append("Order Summary:");
+            document.body.appendChild(p_sum);
+        }
+    </script>
+
+</head>
+<body>
+    <form name="coffee_order" action="GET" onsubmit= "return order_summary()">
+        <br>
+        <label for="name_box">Customer Name: </label>
+        <input type="text" name="name_box" id="name_box" placeholder="Please enter your name" required/><br><br>
+        <label for="coffee_type">Which coffee would you like to order?</label><br><br>
+            <input type="radio" name="coffee_type" value="turk">Turkish coffee $3</option><br>
+            <input type="radio" name="coffee_type" value="american">American coffee $5</option><br>
+            <input type="radio" name="coffee_type" value="iced">Iced latte $7</option><br><br>
+        <label>Do you need any extras?<br><br>
+            <input type="checkbox" name="extras_1" id="extras_1" value="extra_coffee"/>Extra coffee  1.5$<br>
+            <input type="checkbox" name="extras_2" id="extras_2" value="whipped_cream"/>Whipped cream 2$<br>
+            <input type="checkbox" name="extras_3" id="extras_3" value="extra_caramel"/>Extra caramel 3$<br>
+        </label><br><br>
+        <input type="submit" value="Submit"/>
+    </form><br><br>
+</body>
+</html>
